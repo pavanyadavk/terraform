@@ -1,0 +1,14 @@
+name: CI Pipeline
+  on:
+    workflow_dispatch:
+
+  jobs:
+    name: build
+    runs-on: aks
+
+    env:
+      jfrog_user:
+      jfrog_key:
+      
+    uses: actions    
+
