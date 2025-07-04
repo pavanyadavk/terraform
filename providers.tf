@@ -1,12 +1,14 @@
-terraform {
-  required_providers {
-    azurerm = {
-      source = "hashicorp/azurerm"
-      version = "4.34.0"
-    }
-  }
+provider "aws" {
+  region = var.aws_region
 }
 
-provider "azurerm" {
-  # Configuration options
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+
+  required_version = ">= 1.3.0"
 }
